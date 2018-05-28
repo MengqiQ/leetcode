@@ -30,8 +30,8 @@ public class sortedArrayToBST {
         }
         int mid = start + (end - start) / 2;
         TreeNode node = new TreeNode(nums[mid]);
-        node.left = arrayToBST(nums, start, mid);
-        node.right = arrayToBST(nums, mid, end);
+        node.left = arrayToBST(nums, start, mid - 1);
+        node.right = arrayToBST(nums, mid + 1, end);
 
         return node;
 
